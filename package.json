@@ -18,7 +18,10 @@
     "generate-clients": "kubb generate --config kubb.config.ts",
     "build": "rimraf dist && npm run generate-clients && rollup -c",
     "test": "vitest run",
-    "npm-publish": "npm publish --access public"
+    "npm-publish": "npm run publish:npm",
+    "publish:npm": "npm publish --access public",
+    "publish:npm-public": "npm publish --registry https://registry.npmjs.org/ --access public",
+    "publish:github": "npm publish --registry https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@kubb/cli": "^4.1.3",
