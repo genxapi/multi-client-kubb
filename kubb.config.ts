@@ -17,14 +17,14 @@ export default defineConfig(() => [
     plugins: [
       pluginOas({
           "output": {
-            "path": "./src/pets/oas",
+            "path": "oas",
             "clean": true
           },
           "validate": true
       }),
       pluginTs({
           "output": {
-            "path": "./src/pets/src/pets/model",
+            "path": "./model",
             "barrelType": "named"
           },
           "enumType": "asConst",
@@ -32,7 +32,7 @@ export default defineConfig(() => [
       }),
       pluginClient({
           "output": {
-            "path": "./src/pets/client.ts"
+            "path": "./client.ts"
           },
           "client": "fetch",
           "dataReturnType": "data",
@@ -56,14 +56,14 @@ export default defineConfig(() => [
     plugins: [
       pluginOas({
           "output": {
-            "path": "./src/store/oas",
+            "path": "oas",
             "clean": true
           },
           "validate": true
       }),
       pluginTs({
           "output": {
-            "path": "./src/store/src/store/model",
+            "path": "./model",
             "barrelType": "named"
           },
           "enumType": "enum",
@@ -71,7 +71,7 @@ export default defineConfig(() => [
       }),
       pluginClient({
           "output": {
-            "path": "./src/store/client.ts"
+            "path": "./client.ts"
           },
           "client": "axios",
           "dataReturnType": "full",
